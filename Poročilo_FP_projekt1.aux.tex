@@ -1,0 +1,81 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[slovene]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{hyperref}  
+\usepackage{amsthm} 
+
+\newtheorem{definicija}{Definicija}
+
+\begin{document}
+	\thispagestyle{empty}
+	{\large
+		\noindent Univerza v Ljubljani\\[1mm]
+		Fakulteta za matematiko in fiziko\\[5mm]}
+	\vfill
+	
+	\begin{center}{\Large
+			{\bf Predstavitev 4-ciklov v snarkih}\\[2mm]
+			Domen Skornšek, Žan Luka Kolarič\\[10mm]
+			Mentorja: Janoš Vidali, Riste Škrekovski\\[2mm]
+			Predmet: Finančna matematika \\[2mm]}
+	\end{center}
+	\vfill
+	
+	{\large
+		Ljubljana, 2024}
+	\pagebreak
+	
+	\section{Navodilo naloge}
+	Želimo preveriti, ali (in kdaj) uvedba 4-ciklov v snark ohranja kromatični
+	indeks(tj. kromatični indeks ostane 4). Uvedbo 4-cikla lahko izvedemo
+	vsaj na dva načina:
+	\begin{enumerate}
+		\item Vzemite dva robova ab in cd v G in ju dvakrat razdelite, tako da dobite
+		pot au1u2b iz roba ab in pot cv1v2d iz roba cd. Nato povežite u1 z v1
+		in u2 z v2.
+		\item Naj bo ab rob v G in a1, a2 druga dva soseda a, in naj bosta b1, b2
+		druga dva soseda b. Zdaj odstranimo vrhova a, b in povežemo a1 z b1
+		in a2 z b2.
+	\end{enumerate}
+	
+	\section{Definicije}
+	\begin{definicija}
+		Če so vsa vozlišča grafa G enake stopnje
+		k, pravimo, da je graf \textbf{k-regularen}; 3-regularnim grafom pravimo tudi \textbf{kubični grafi}.
+	\end{definicija}
+	
+	\begin{definicija}
+		Naj bo $k \in \mathbb{N}$ in $c': E(G) \to \{1, 2, \dots, k\}$ preslikava. Preslikavi $c'$ pravimo \textit{$k$-barvanje povezav} multigrafa brez zank $G$. Pravimo, da je barvanje povezav $c'$ \textit{pravilno}, če so povezave, ki imajo kako skupno krajišče, paroma različno obarvane. Najmanjše število $k$, za katerega obstaja pravilno $k$-barvanje povezav multigrafa brez zank, imenujemo \textit{kromatični indeks} multigrafa $G$ in ga označimo s $\chi'(G)$.
+	\end{definicija}
+	
+	\begin{definicija}
+		Dolžini najkrajšega cikla v grafu G pravimo ožina grafa G. Označimo jo z g(G).
+	\end{definicija}
+	\begin{definicija}
+		Pravimo, da je A cikličen prerez, če ima G \textbackslash A dve komponenti in vsaka izmed teh dveh komponent vsebuje cikel.
+	\end{definicija}
+	
+	\begin{definicija}
+		Velikosti najmanjšega cikličnega prereza G je ciklična (povezavna) povezanost grafa G. Označimo jo z $\lambda_c(G)$.
+	\end{definicija}
+	
+	\begin{definicija}
+		Graf G je ciklično k-povezan po povezavah, če je $\lambda_c(G)$ $\geq$ k za
+		naravno število k. Z drugimi besedami: odstraniti moramo prerez velikosti vsaj k,
+		da G razpade na dve komponenti, kjer vsaka vsebuje cikel.
+	\end{definicija}
+	
+	\begin{definicija}
+		Snark je ciklično 4-povezan kubični graf z ožino n $\geq$ 5 in kromatičnim indeksom 4.
+	\end{definicija}
+	
+	\section{Metoda dela}
+	Odločila sva se, da bova uporabila prvi pristop torej, da bova vzela dva robova ab in cd v grafu G in ju dvakrat razdelila, tako da bova dobila pot $au_1u_2b$ iz roba ab in pot $cv_1v_2d$ iz roba cd. Nato bova povezala $u_1$ z $v_1$ in $u_2$ z $v_2$.
+\end{document}
