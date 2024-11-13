@@ -1,1 +1,2 @@
-# projekt_FP
+# Uvedba 4-ciklov v snarke
+
